@@ -20,15 +20,6 @@ then
 else
         echo "Invalid Input for Last name"
 fi
-echo Enter your Email address
-read email
-email_pat='^[0-9A-Za-z]+([._-][0-9A-Za-z]+)*@[0-9A-Za-z]{2,4}[.][0-9A-Za-z]{2,4}([.][0-9A-Za-z]{2})*$'
-if [[ $email =~ $email_pat ]]
-then
-	echo You have a valid email id
-else
-	echo Invalid email id
-fi
 echo Enter a valid countrycode follwed by a space follwed by a 10 digit mobile number
 read mobile
 mobile_pat='^[9]{1}[1]{1}[[:space:]][0-9]{10}$'
@@ -46,5 +37,14 @@ then
 	echo Valid Password
 else
 	echo Invalid Password
+fi
+echo Enter your Email address
+read email
+email_pat='^[A-Za-z]+(([_-.+])*[0-9]+)*@[0-9A-Za-z]+[.][A-Za-z]{2,}[,]*([.][a-z]+)*$'
+if [[ $email =~ $email_pat ]]
+then
+        echo You have a valid email id
+else
+        echo Invalid email id
 fi
 
