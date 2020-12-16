@@ -40,7 +40,7 @@ else
 fi
 echo "Enter your password to check for validity"
 read password
-pass_pat='^[0-9a-zA-Z]{8,}$'
+pass_pat='^[A-Z]{1}[0-9a-zA-Z]{7,}$'
 if [[ $password =~ $pass_pat ]]
 then
 	echo Valid Password
