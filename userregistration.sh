@@ -38,3 +38,13 @@ then
 else
 	echo Invalid number
 fi
+echo "Enter your password to check for validity"
+read password
+pass_pat='^[0-9a-zA-Z]{8,}$'
+if [[ $password =~ $pass_pat ]]
+then
+	echo Valid Password
+else
+	echo Invalid Password
+fi
+
